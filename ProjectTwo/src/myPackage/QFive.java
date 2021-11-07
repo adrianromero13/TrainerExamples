@@ -7,7 +7,7 @@ package myPackage;
  */
 
 public class QFive {
- // enter a string and a number...
+	// enter a string and a number...
 	// return the characters in the string up to the number given
 	public String substringByInteger(String str, int idx) {
 		// a character variable to hold each iteration of the string
@@ -15,11 +15,35 @@ public class QFive {
 		// new string
 		String newStr = "";
 		int l = str.length() - (str.length() - idx);
-		
-		for (int i = 0; i <= l; i++) {
-			letter = str.charAt(i); // sets x as the letter we are looking at
-			newStr = newStr + letter; // adds the x value at the beginning of the new string
-			}
+
+		for (int i = 0; i < l; i++) {
+			// sets x as the letter we are looking at
+			letter = str.charAt(i);
+			// adds the x value at the beginning of the new string
+			newStr = newStr + letter;
+		}
 		return newStr;
+	}
+
+	// work solution
+	public String SubstringSolution(String str, int idx) {
+
+		// set up input array and output array
+		char[] charArray = str.toCharArray();
+		char[] substringArray = new char[idx];
+
+		// copy over substring
+		for (int i = 0; i < idx; ++i) {
+			substringArray[i] = charArray[i];
+		}
+
+		// Turn the substring into a String
+		return new String(substringArray);
+	}
+
+	String testString = "My test string";
+
+	public void TestSubstring(int idx) {
+		System.out.println(SubstringSolution(testString, idx));
 	}
 }

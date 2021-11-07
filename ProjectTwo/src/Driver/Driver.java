@@ -1,9 +1,11 @@
 package Driver;
 
 import myPackage.QOne;
+import myPackage.QSix;
 import myPackage.QTwo;
 import myPackage.QThree;
 import myPackage.QFour;
+import myPackage.QEight;
 import myPackage.QFive;
 
 public class Driver {
@@ -45,6 +47,23 @@ public class Driver {
 		String str = "Murdoc";
 		int endNumber = 3;
 		System.out.println("\n" + q5.substringByInteger(str, endNumber));
+//		q5.TestSubstring(endNumber);;
+		
+		QSix q6 = new QSix();
+		int evenNum = 22;
+		int oddNum = -3;
+		boolean evenAns = q6.isEven(evenNum);
+		boolean oddAns = q6.isEven(oddNum);
+		System.out.println("Is Number (" + evenNum + ") even? - " + evenAns);
+		System.out.println("Is Number (" + oddNum + ") even? - " + oddAns);
+		
+		
+		
+		QEight q8 = new QEight();
+		 String[] arrayList= {"karan", "madam", "tom", "civic", "radar", "jimmy", "kayak", "john", "refer", "billy", "did"} ;
+		 q8.separateArray(arrayList);
+		 System.out.println("Palindromes: " + q8.getPalindromeList());
+		 System.out.println("Not Palindromes: " + q8.getNotPalindromeList());
 	}
 }
 
