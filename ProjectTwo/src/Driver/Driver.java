@@ -1,12 +1,19 @@
 package Driver;
 
 import myPackage.QOne;
+import myPackage.QSeven;
 import myPackage.QSix;
+import myPackage.QTen;
 import myPackage.QTwo;
 import myPackage.QThree;
 import myPackage.QFour;
+import myPackage.QNine;
 import myPackage.QEight;
 import myPackage.QFive;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class Driver {
 
@@ -57,13 +64,45 @@ public class Driver {
 		System.out.println("Is Number (" + evenNum + ") even? - " + evenAns);
 		System.out.println("Is Number (" + oddNum + ") even? - " + oddAns);
 		
+//		QSeven q7 = new QSeven();
+//		// Seven requires an ArrayList for each employee
+//		ArrayList<QSeven> employee = new ArrayList<QSeven>();
+//		employee.add(new QSeven("Jane", "Supervisor", 33));
+//		employee.add(new QSeven("Adrian", "Manager", 49));
+//		
+//		System.out.println("\nSorted By Name");
+//		Collections.sort(employee, new q7.SortByName());
+//
+//		for (int i = 0; i < employee.size(); i++)
+//			System.out.println(employee.get(i));
+//		
+//		
+//		System.out.println("\nSorted By Department");
+//		Collections.sort(employee, new q7.SortByDepartment());
+//		for (int i = 0; i < employee.size(); i++)
+//			System.out.println(employee.get(i));
+//		
+//		System.out.println("\nSorted By Age");
+//		Collections.sort(employee, new q7.SortByAge());
+//		for (int i = 0; i < employee.size(); i++)
+//			System.out.println(employee.get(i));
+		
 		
 		
 		QEight q8 = new QEight();
 		 String[] arrayList= {"karan", "madam", "tom", "civic", "radar", "jimmy", "kayak", "john", "refer", "billy", "did"} ;
 		 q8.separateArray(arrayList);
-		 System.out.println("Palindromes: " + q8.getPalindromeList());
+	
+		 System.out.println("\nPalindromes: " + q8.getPalindromeList());
 		 System.out.println("Not Palindromes: " + q8.getNotPalindromeList());
+		 
+		 QNine q9 = new QNine();
+		 q9.primeNumbers();
+		 
+		 QTen q10 = new QTen();
+		 System.out.println("\n\nWhat 2 numbers is smaller?");
+		 q10.smallerNum();
+		 
 	}
 }
 
